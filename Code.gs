@@ -14,9 +14,11 @@ function elaborateIGCData() {
     
     csvId= file.next().getId()
     
-  } 
-  DriveApp.getFileById(csvId).makeCopy(folderElaboration);
-  DriveApp.getFileById(csvId).setName('oldFile');  
-  
-  //schedule this function daily
+  }
+  if(csvId){    
+    DriveApp.getFileById(csvId).makeCopy(folderElaboration).setName('');
+    DriveApp.getFileById(csvId).setName('oldFile'); 
+  }
+  //after a while... invoke ETL jobs from Jenkins
+  ETLCaller.runETLJob();
 }
