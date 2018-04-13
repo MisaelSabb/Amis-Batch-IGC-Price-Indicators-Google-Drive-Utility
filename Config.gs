@@ -6,18 +6,11 @@ var Config={
     /**
 	 * ETL ENDPOINTS
 	 * @type {String}
-	 */
-    ETLEndpoints:"",
-  
+	 */    
+    ETLEndpoints:"",    
     /**
-	 * ETL User
+	 * ETL ETLjobNameAndParameters
 	 * @type {String}
 	 */	
-    ETLUser:"",  
-  
-     /**
-	 * ETL Psw
-	 * @type {String}
-	 */	
-    ETLPsw:""
+    ETLjobNameAndParameters:""
 };
