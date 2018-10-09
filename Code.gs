@@ -2,7 +2,6 @@ function elaborateIGCData() {
   //shared folder with IGC
   var folder = DriveApp.getFolderById('');
   //the folder where place the elaboration element
-  var folderElaboration = DriveApp.getFolderById('');
   //it will contain the file id
   var csvId;
   
@@ -21,4 +20,7 @@ function elaborateIGCData() {
   }
   //after a while... invoke ETL jobs from Jenkins
   ETLCaller.runETLJob();
+  
+  
+  ETLCaller.runCloudETLJob();
 }
